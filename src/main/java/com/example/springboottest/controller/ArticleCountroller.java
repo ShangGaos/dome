@@ -25,6 +25,7 @@ public class ArticleCountroller {
         //上面是查询的结果数据，但是返回给前端不能是全部的，这里 要vo,也就是要格式化一下数据
         //转化vo,使用的是一个工具类,.hutool,报错是要加mevan的工具类没有加，所以没有这个类
         List<ArticleVo> s = BeanUtil.checkUnsupportedType(/*articleService,fff ArticleVo.class*/);
+        List<ArticleVo> s = BeanUtil.checkUnsupportedType(/*articleService, 456ArticleVo.class*/);
 
         //添加数据返回
         model.addAttribute("articleList",s);
