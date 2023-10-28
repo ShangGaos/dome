@@ -1,0 +1,12 @@
+
+#这里是数据库连接池的一些配置等
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://loalhost:3306/blog?serverTi.....
+#   username:root
+#    password:123
+    hikari:
+      auto-commit: true
+      maximum-pool-size: 10
+#      这些因该是一些连接池的设置

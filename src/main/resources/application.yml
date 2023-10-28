@@ -1,0 +1,22 @@
+
+server:
+  port: 8888
+  servlet:
+    context-path: /blog
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+  config:
+    import: conf/app-base.yml,conf/db.yml
+#    导入两外的两个配置文件
+
+
+#下面是mybatis的设置，db中是数据库配置的文件
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: false
+  mapper-locations: classpath:/mappers/**/*.xml
